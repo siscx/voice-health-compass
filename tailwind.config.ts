@@ -61,7 +61,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
 				}
+			},
+			backgroundImage: {
+				'gradient-voice': 'var(--gradient-voice)',
+				'gradient-companion': 'var(--gradient-companion)',
+				'gradient-medical': 'var(--gradient-medical)',
+				'gradient-health': 'var(--gradient-health)'
+			},
+			boxShadow: {
+				'voice-pulse': 'var(--voice-pulse)',
+				'companion-glow': 'var(--companion-glow)',
+				'medical': 'var(--medical-shadow)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +103,51 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'companion-breathe': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						boxShadow: 'var(--companion-glow)'
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+						boxShadow: '0 0 70px hsl(25 95% 65% / 0.6)'
+					}
+				},
+				'voice-pulse': {
+					'0%, 100%': {
+						opacity: '0.4'
+					},
+					'50%': {
+						opacity: '1'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'companion-breathe': 'companion-breathe 4s ease-in-out infinite',
+				'voice-pulse': 'voice-pulse 2s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'fade-in-up': 'fade-in-up 0.6s ease-out'
 			}
 		}
 	},
