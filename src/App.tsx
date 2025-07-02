@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { VoyaSidebar } from "@/components/VoyaSidebar";
 import Dashboard from "./pages/Dashboard";
 import Analytics from "./pages/Analytics";
+import ConversationInsights from "./pages/ConversationInsights";
 import Family from "./pages/Family";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
@@ -39,6 +40,7 @@ const App = () => (
                 <Routes>
                   <Route path="/" element={<Dashboard />} />
                   <Route path="/analytics" element={<Analytics />} />
+                  <Route path="/insights" element={<ConversationInsights />} />
                   <Route path="/family" element={<Family />} />
                   <Route path="/reports" element={<Reports />} />
                   <Route path="/settings" element={<Settings />} />

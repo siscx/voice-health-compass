@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { VoyaCompanion } from "@/components/VoyaCompanion";
 import { VoiceHealthMetrics } from "@/components/VoiceHealthMetrics";
+import { RecentInsights } from "@/components/RecentInsights";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Dashboard() {
@@ -43,16 +44,21 @@ export default function Dashboard() {
         {/* Voice Health Metrics */}
         <div className="space-y-4">
           <h2 className="text-xl font-semibold text-foreground">
-            Today's Voice Health Snapshot
+            Today&apos;s Voice Health Snapshot
           </h2>
           <VoiceHealthMetrics />
         </div>
 
-        {/* Recent Insights */}
+        {/* Recent Conversation Insights */}
+        <div className="space-y-4">
+          <RecentInsights />
+        </div>
+
+        {/* Additional Insights Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Card className="bg-card/80 border-border/50">
             <CardHeader>
-              <CardTitle className="text-lg text-foreground">Recent Insights</CardTitle>
+              <CardTitle className="text-lg text-foreground">Today&apos;s Health Summary</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-3">

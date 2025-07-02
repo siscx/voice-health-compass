@@ -14,6 +14,7 @@ import {
 const navigationItems = [
   { title: "Dashboard", url: "/", icon: "○" },
   { title: "Voice Analytics", url: "/analytics", icon: "〜" },
+  { title: "Conversation Insights", url: "/insights", icon: "💭" },
   { title: "Family", url: "/family", icon: "♥" },
   { title: "Reports", url: "/reports", icon: "📊" },
   { title: "Settings", url: "/settings", icon: "⚙" },
